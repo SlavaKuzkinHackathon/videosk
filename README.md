@@ -17,7 +17,7 @@ yarn watch:client
 ```
 
 
-### Deployment
+### Deployment`
 
 **Heroku**
 
