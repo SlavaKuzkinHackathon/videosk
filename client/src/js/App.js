@@ -84,6 +84,8 @@ class App extends Component {
           startCall={this.startCallHandler}
         />
         {!_.isEmpty(this.config) && (
+          <div>
+            <input type="file" name="video" accept="video/*" capture="user"/>
           <CallWindow
             status={callWindow}
             localSrc={localSrc}
@@ -92,6 +94,7 @@ class App extends Component {
             mediaDevice={this.pc.mediaDevice}
             endCall={this.endCallHandler}
           />
+          </div>
         ) }
         <CallModal
           status={callModal}
