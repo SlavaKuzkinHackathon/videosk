@@ -13,12 +13,14 @@ class MediaDevice extends Emitter {
  
         var constraints = { video: { facingMode: (front? "user" : "environment") } }; */
 
-        
-  start() {
-    const constraints = {
 
+  start() {
+
+    var front = false;
+    const constraints = {
       video: {
-        facingMode: 'user',
+        facingMode: (front? "user" : "environment"),
+        /* facingMode: 'user', */
         height: { min: 360, ideal: 720, max: 1080 }
       },
       audio: true
