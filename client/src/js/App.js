@@ -85,7 +85,6 @@ class App extends Component {
         />
         {!_.isEmpty(this.config) && (
           <div>
-            <input type="file" name="video" accept="video/*" capture="user"/>
           <CallWindow
             status={callWindow}
             localSrc={localSrc}
