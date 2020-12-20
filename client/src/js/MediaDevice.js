@@ -29,16 +29,16 @@ class MediaDevice extends Emitter {
     // Старые браузеры могут не реализовывать свойство mediaDevices,
     //поэтому вначале присваеваем свойству ссылку на пустой объект
 
-    if (navigator.mediaDevices === undefined) {
+    /* if (navigator.mediaDevices === undefined) {
       navigator.mediaDevices = {};
-    }
+    } */
 
     // Некоторые браузеры частично реализуют свойство mediaDevices, поэтому
     //мы не можем присвоить ссылку на объект свойству getUserMedia, поскольку
     //это переопределит существующие свойства. Здесь, просто добавим свойство
     //getUserMedia , если оно отсутствует.
 
-    if (navigator.mediaDevices.getUserMedia === undefined) {
+   /*  if (navigator.mediaDevices.getUserMedia === undefined) {
       navigator.mediaDevices.getUserMedia = function (constraints) {
 
         // Сначала, если доступно, получим устаревшее getUserMedia
@@ -58,9 +58,9 @@ class MediaDevice extends Emitter {
           getUserMedia.call(navigator, constraints, resolve, reject);
         });
       }
-    }
+    } */
 
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+    /* navigator.mediaDevices.getUserMedia({ audio: true, video: true })
       .then(function (stream) {
         var video = document.querySelector('video');
         // Устаревшие браузеры могут не иметь свойство srcObject
@@ -77,7 +77,7 @@ class MediaDevice extends Emitter {
       .catch(function (err) {
         console.log(err.name + ": " + err.message);
       });
-
+ */
 
 
 
